@@ -919,17 +919,17 @@ class _SecondPageState extends State<SecondPage> {
 
   @override
   Widget build(BuildContext context) {
-    Color getColor(Set<MaterialState> states) {
-      const Set<MaterialState> interactiveStates = <MaterialState>{
-        MaterialState.pressed,
-        MaterialState.hovered,
-        MaterialState.focused,
-      };
-      if (states.any(interactiveStates.contains)) {
-        return Colors.blue;
-      }
-      return Colors.red;
-    }
+    // Color getColor(Set<MaterialState> states) {
+    //   const Set<MaterialState> interactiveStates = <MaterialState>{
+    //     MaterialState.pressed,
+    //     MaterialState.hovered,
+    //     MaterialState.focused,
+    //   };
+    //   if (states.any(interactiveStates.contains)) {
+    //     return Colors.blue;
+    //   }
+    //   return Colors.red;
+    // }
 
     return Scaffold(
       appBar: AppBar(
@@ -956,9 +956,6 @@ class _SecondPageState extends State<SecondPage> {
                     'This is normal toast',
                   );
                 },
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.resolveWith(getColor)),
                 child: Text(
                   'normal toast',
                   style: TextStyle(fontSize: 15.0, color: Colors.white),
